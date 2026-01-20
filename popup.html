@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>批量价格修改</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <header class="panel__header">
+        <h1>批量价格修改</h1>
+        <p>选择操作类型并应用到页面中的价格输入框。</p>
+      </header>
+
+      <section class="panel__section">
+        <label class="label" for="operation">操作类型</label>
+        <select id="operation" class="control">
+          <option value="multiplier">批量倍数</option>
+          <option value="delta">批量加减</option>
+          <option value="integer">批量整数</option>
+        </select>
+      </section>
+
+      <section class="panel__section" id="valueSection">
+        <label class="label" for="valueInput" id="valueLabel">输入倍数</label>
+        <div class="input-row">
+          <input
+            id="valueInput"
+            class="control"
+            type="number"
+            step="0.01"
+            placeholder="例如 1.05"
+          />
+          <span class="hint" id="valueHint">倍数大于 0</span>
+        </div>
+      </section>
+
+      <section class="panel__section">
+        <label class="label" for="roundMode">整数规则</label>
+        <select id="roundMode" class="control">
+          <option value="round">四舍五入</option>
+          <option value="ceil">向上取整</option>
+          <option value="floor">向下取整</option>
+        </select>
+      </section>
+
+      <section class="panel__section">
+        <button id="applyBtn" class="button">应用到页面价格</button>
+        <p class="status" id="statusText"></p>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
