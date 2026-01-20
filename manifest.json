@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "批量价格修改器",
+  "version": "1.0.0",
+  "description": "在商品发布页面批量调整价格：倍数、加减、整数化。",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "scripting"]
+}
